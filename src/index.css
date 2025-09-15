@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  --primary-color: rgb(255, 255, 255);
+  --secondary-color: rgb(10, 0, 27);
+  --font-family: 'Arial, sans-serif';
+  --background-color: rgb(10, 0, 27) fixed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
