@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Manrope';
+  src: url('./assets/fonts/Manrope-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --primary-color: rgb(255, 255, 255);
   --secondary-color: rgb(10, 0, 27);
@@ -16,5 +24,6 @@
 html, body {
   height: 100%;
   width: 100%;
+  font-family: 'Manrope', sans-serif
 }
 
