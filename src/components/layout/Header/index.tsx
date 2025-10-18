@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import './style.css'
+import { Link } from 'react-router'
+import HeaderNav from './HeaderNav'
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -21,34 +23,11 @@ const Header = () => {
     <header className={`header ${scrolled ? "scrolled" : ""}`}>
       <div className="header-container">
         <div className="font-bold text-2xl">
-          <a href="/" className="link">
+          <Link to="/" className="link">
             !Nik
-          </a>
+          </Link>
         </div>
-        <nav className="header-links">
-          <ul className="header-menu">
-            <li>
-              <a href="#" className="link">
-                home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="link">
-                expertise
-              </a>
-            </li>
-            <li>
-              <a href="#" className="link">
-                work
-              </a>
-            </li>
-            <li>
-              <a href="#" className="link">
-                contact
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <HeaderNav />
       </div>
     </header>
   )
