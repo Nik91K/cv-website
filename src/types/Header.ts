@@ -1,4 +1,4 @@
-export type NavigationItem = {
+type NavigationItem = {
     id: string,
     label: string,
     path: string
