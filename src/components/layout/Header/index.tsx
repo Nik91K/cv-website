@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import './style.css'
-import { Link } from 'react-router'
 import HeaderNav from './HeaderNav'
 
 const Header = () => {
@@ -23,9 +22,9 @@ const Header = () => {
     <header className={`header ${scrolled ? "scrolled" : ""}`}>
       <div className="header-container">
         <div className="font-bold text-2xl">
-          <Link to="/" className="link">
+          <a href='/#home' className="link">
             !Nik
-          </Link>
+          </a>
         </div>
         <HeaderNav />
       </div>

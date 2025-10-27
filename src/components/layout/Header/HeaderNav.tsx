@@ -1,7 +1,6 @@
 import React from 'react'
 import type { HeaderNavigationProps } from '../../../types/Header'
 import { NAVIGATION_ITEMS } from '../../../fixtures/header.fixture'
-import { Link } from 'react-router'
 
 const HeaderNav: React.FC<HeaderNavigationProps> = ({
     items = NAVIGATION_ITEMS,
@@ -12,15 +11,22 @@ const HeaderNav: React.FC<HeaderNavigationProps> = ({
             <ul className="header-menu flex text-2xl gap-5">
                 {items.map((item) =>
                     <li key={item.id}>
-                        <Link to={item.path} className='link'>
+                        <a 
+                            href={item.path}
+                            className='link'               
+                            onClick={(e) => {
+                                e.preventDefault()
+                                const target = document.querySelector(item.path)
+                                target?.scrollIntoView({ behavior: 'smooth' })
+                            }}
+                        >
                             {item.label}
-                        </Link>
+                        </a>
                     </li>
                 )}
             </ul>
         </nav>
     )
-
 }
 
 export default HeaderNav
