@@ -9,6 +9,7 @@ function App() {
     <LayoutPage>
       <HeroSection />
       <AboutHero />
+      
     </LayoutPage>
   )
 }

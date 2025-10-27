@@ -19,6 +19,10 @@ export const ABOUT = {
                 title: 'Frontend',
                 skills: ['JavaScript', 'TypeScript', 'React', 'TailwindCSS'],
             },
+            {
+                title: 'Backend',
+                skills: [],
+            },
         ],
         contacts: {
             github: 'https://github.com/Nik91K',
