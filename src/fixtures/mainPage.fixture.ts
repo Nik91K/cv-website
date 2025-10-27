@@ -30,3 +30,45 @@ export const ABOUT = {
         }
 
 }
+
+export const WORK = {
+  id: 'experience',
+  title: 'My Work',
+  experience: [
+    {
+      company: 'Lorem Corp',
+      role: 'Frontend Developer',
+      years: '2022 — Present',
+    },
+    {
+      company: 'Ipsum Solutions',
+      role: 'Backend Developer',
+      years: '2020 — 2022',
+    },
+    {
+      company: 'Dolor Inc.',
+      role: 'Fullstack Intern',
+      years: '2019 — 2020',
+    },
+  ],
+  projects: [
+    {
+      title: 'Portfolio Website',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      image: 'https://via.placeholder.com/300x200',
+      links: ['https://github.com/username/portfolio', 'https://portfolio.com'],
+    },
+    {
+      title: 'E-commerce App',
+      text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      image: 'https://via.placeholder.com/300x200',
+      links: ['https://github.com/username/ecommerce'],
+    },
+    {
+      title: 'Task Manager',
+      text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      image: 'https://via.placeholder.com/300x200',
+      links: [],
+    },
+  ],
+}
