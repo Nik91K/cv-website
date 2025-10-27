@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import './style.css'
 import HeaderNav from './HeaderNav'
 
 const Header = () => {
@@ -19,10 +18,10 @@ const Header = () => {
   }, [])
 
   return (
-    <header className={`header ${scrolled ? "scrolled" : ""}`}>
-      <div className="header-container">
+    <header className={`w-full px-[4vh] h-[10vh] sticky top-0 z-[1000] transition-all duration-300 ease-in-out backdrop-blur-[0px] ${scrolled ? " bg-[var(--transparent-color)] backdrop-blur-[15px] border-b border-white/10 shadow-md"  : ""}`}>
+      <div className="h-full w-full flex justify-between items-center">
         <div className="font-bold text-2xl">
-          <a href='/#home' className="link">
+          <a href='/#home' className="link whitespace-nowrap">
             !Nik
           </a>
         </div>

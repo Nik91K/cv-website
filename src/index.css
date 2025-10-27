@@ -11,8 +11,8 @@
 :root {
   --primary-color: rgb(255, 255, 255);
   --secondary-color: rgb(10, 0, 27);
+  --transparent-color: rgba(0, 0, 0, 0.397);
   --font-family: 'Arial, sans-serif';
-  --background-color: rgb(10, 0, 27) fixed;
 }
 
 @layer base {
