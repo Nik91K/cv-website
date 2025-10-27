@@ -7,9 +7,9 @@ const ScrollToTopButton = () => {
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 200) {
-                setIsVisible(true);
+                setIsVisible(true)
             } else {
-                setIsVisible(false);
+                setIsVisible(false)
             }
         }
 
@@ -26,10 +26,10 @@ const ScrollToTopButton = () => {
         <>
         {isVisible && (
             <button 
-            onClick={scrollToTop}
-            className="transition fixed"
+                onClick={scrollToTop}
+                className="transition fixed right-8 bottom-8 bg-[var(--transparent-color)] p-3 rounded-2xl cursor-pointer link"
             >
-                <FaArrowUp />
+                <FaArrowUp size={18}/>
             </button>
         )}
         </>
