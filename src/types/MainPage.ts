@@ -34,18 +34,33 @@ type Experience = {
     company?: string,
     role?: string,
     years?: string,
+    description?: string,
+}
+
+type ExperienceSection = {
+    title?: string,
+    subtitle?: string,
+    items?: Experience[],
 }
 
 type Projects = {
     title?: string,
     text?: string,
     image?: string,
+    imageAlt?: string,
     links?: string[],
+    technologies?: string[],
+}
+
+type ProjectsSection = {
+    title?: string,
+    subtitle?: string,
+    items?: Projects[]
 }
 
 export type WorkProps = {
     id?: string,
     title?: string
-    experience?: Experience[],
-    projects?: Projects[],
+    experience?: ExperienceSection,
+    projects?: ProjectsSection,
 }

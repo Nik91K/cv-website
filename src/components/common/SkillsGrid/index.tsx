@@ -10,7 +10,7 @@ const SkillsGrid: React.FC<AboutItemProps> = ({
             {skills.map((skill, index) => (
                     <div
                         key={index}
-                        className="bg-[var(--primary-color)] rounded-2xl shadow-md hover:shadow-lg transition-shadow p-8 border border-amber-100 m-2"
+                        className="bg-[var(--primary-color)] rounded-2xl shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg p-8 border border-amber-100 m-2"
                     >
                         <h3 className="text-center text-2xl mb-4" >
                             {skill.title}

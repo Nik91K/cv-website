@@ -12,9 +12,9 @@ const AboutHero: React.FC<AboutItemProps> = ({
     return (
         <section
             id={id}
-            className="w-full min-h-screen bg-gradient-to-b from-sky-100 to-white flex items-center justify-center py-24 px-6"
+            className="w-full min-h-screen bg-gradient-to-b from-sky-100 to-[var(--primary-color)] flex items-center justify-center py-24 px-6"
         >
-            <div className="container max-w-5xl text-center">
+            <div className="container text-center">
                 <h2 className="text-4xl md:text-6xl font-extrabold text-[var(--secondary-color)] mb-8">
                     {title}
                 </h2>
