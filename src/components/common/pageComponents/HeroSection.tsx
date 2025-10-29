@@ -2,6 +2,7 @@ import React from "react";
 import { HERO_SECTION } from "../../../fixtures/mainPage.fixture";
 import type { HeroSectionProps } from "../../../types/MainPage";
 import Aurora from '../../Aurora';
+import SplitText from "../../SplitText";
 
 const HeroSection: React.FC<HeroSectionProps> = ({
     items = HERO_SECTION,
@@ -27,12 +28,32 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 </div>
                 <div className='flex justify-center items-center max-w-7xl mx-auto -translate-y-20' >
                     <div className="flex-1 text-left">
-                        <h1 className="text-5xl md:text-8xl font-bold mb-6">
-                            {item.title}
-                        </h1>
-                        <p className="text-xl">
-                            {item.subtitle}
-                        </p>
+                        <SplitText 
+                            text={item.title}
+                            className="text-5xl md:text-8xl font-bold mb-6"
+                            delay={100}
+                            duration={0.6}
+                            ease="power3.out"
+                            splitType="chars"
+                            from={{ opacity: 0, y: 40 }}
+                            to={{ opacity: 1, y: 0 }}
+                            threshold={0.1}
+                            rootMargin="-100px"
+                            textAlign="center"
+                        />
+                        <SplitText 
+                            text={item.subtitle}
+                            className="text-xl"
+                            delay={100}
+                            duration={0.4}
+                            ease="power3.out"
+                            splitType="lines"
+                            from={{ opacity: 0, y: 40 }}
+                            to={{ opacity: 1, y: 0 }}
+                            threshold={0.1}
+                            rootMargin="-100px"
+                            textAlign="left"
+                        />
                     </div>
                     <div className="flex-1 flex justify-center">
                         <img

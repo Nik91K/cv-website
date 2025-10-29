@@ -13,7 +13,7 @@ const WorkSection: React.FC<WorkProps> = ({
     return (
         <section 
             id={id}
-            className="w-full min-h-screen flex items-center justify-center py-24 px-6 text-[var(--primary-color)]"
+            className="w-full min-h-screen flex items-center justify-center py-[11vh] px-6 text-[var(--primary-color)]"
         >
             <div className="container text-center">
                 <h2 className="text-4xl md:text-6xl font-extrabold mb-8">
