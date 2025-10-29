@@ -72,7 +72,15 @@ const WorkSection: React.FC<WorkProps> = ({
                                         )}
                                         <p>{project.title}</p>
                                         <p>{project.text}</p>
-                                        {project.technologies}
+                                        {project.technologies && (
+                                            <ul>
+                                                {project.technologies.map((technologie, index) => (
+                                                    <li key={index}>
+                                                        {technologie}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
                                         {project.links && (
                                             <ul className="">
                                                 {project.links.map((link, index) => (
