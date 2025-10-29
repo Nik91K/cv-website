@@ -12,6 +12,8 @@
   --primary-color: rgb(255, 255, 255);
   --secondary-color: rgb(10, 0, 27);
   --transparent-color: rgba(0, 0, 0, 0.397);
+  --purple-color: rgb(194, 122, 255);
+  --purple-color-hover: rgb(218, 178, 255);
   --font-family: 'Arial, sans-serif';
 }
 
