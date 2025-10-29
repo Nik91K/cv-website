@@ -34,7 +34,7 @@ const WorkSection: React.FC<WorkProps> = ({
                                         <h3 className="text-xl font-bold">
                                             {experience.company}
                                         </h3>
-                                        <p className="text-purple-300 text-sm font-medium">
+                                        <p className="text-[var(--purple-color)] text-sm font-medium">
                                             {experience.years}
                                         </p>
                                         <p className="text-lg font-semibold text-white/90">
@@ -89,7 +89,7 @@ const WorkSection: React.FC<WorkProps> = ({
                                                             href={link}
                                                             key={index}
                                                             target="_blank"
-                                                            className="text-sm font-semibold text-purple-400 hover:text-purple-300 transition"
+                                                            className="text-sm font-semibold text-[var(--purple-color)] hover:text-[var(--purple-color-hover)] transition"
                                                         >
                                                             {link}
                                                         </a>
