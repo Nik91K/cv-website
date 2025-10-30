@@ -12,9 +12,9 @@ type QuickLinks = {
     path: string,
 }
 
-export type Footer = {
-    id: string,
-    socials: Socials[],
-    copyright: string,
-    quickLinks: QuickLinks[],
+export type FooterProps = {
+    id?: string,
+    socials?: Socials[],
+    copyright?: string,
+    quickLinks?: QuickLinks[],
 }

@@ -1,8 +1,8 @@
 import React from "react"
-import type { Footer } from "../../../types/Footer"
+import type { FooterProps } from "../../../types/Footer"
 import { FOOTER } from "../../../fixtures/footer.fixture"
 
-const Footer: React.FC<Footer> = ({
+const Footer: React.FC<FooterProps> = ({
     id = FOOTER.id,
     socials = FOOTER.socials,
     copyright = FOOTER.copyright,
