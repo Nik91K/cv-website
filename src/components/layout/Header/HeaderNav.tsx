@@ -8,7 +8,7 @@ const HeaderNav: React.FC<HeaderNavigationProps> = ({
 
     return (
         <nav className="flex justify-center mx-auto whitespace-nowrap">
-            <ul className="flex text-xl gap-5">
+            <ul className="flex flex-col md:flex-row text-2xl md:text-xl gap-5">
                 {items.map((item) =>
                     <li key={item.id}>
                         <a 

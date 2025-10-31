@@ -1,42 +1,33 @@
-import { useEffect, useRef } from 'react'
+import { useState } from 'react'
+import './style.css'
+import HeaderNav from '../Header/HeaderNav'
 
 const Sidebar = () => {
-
-    const hamRef = useRef<HTMLDivElement>(null)
-    const menuRef = useRef<HTMLDivElement>(null)
-
-    useEffect(() => {
-        const hamMenu = hamRef.current
-        const offScreenMenu = menuRef.current
-
-        if ( hamMenu && offScreenMenu ) {
-            
-            const toggleMenu = () => {
-                hamMenu.classList.toggle('active')
-                offScreenMenu.classList.toggle('active')
-            }
-
-            hamMenu.addEventListener('click', toggleMenu)
-
-            return () => {
-                hamMenu.removeEventListener('click', toggleMenu)
-            }
-
-        }
-    }, [])
+    const [open, setOpen] = useState(false)
 
     return (
-        <div style={{ display: 'flex' }}>
-            <div ref={hamRef} className="">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div className='flex'>
+            <div className="ham-menu z-[801] fixed h-12 w-10 bg-[var(--transparent-color) cursor-pointer] top-8 left-5 p-2" onClick={() => setOpen(!open)}>
+                <span className={`${open ? 'ham-menu-span-active' : 'ham-menu-span'}`}></span>
+                <span className={`${open ? 'ham-menu-span-active' : 'ham-menu-span'}`}></span>
+                <span className={`${open ? 'ham-menu-span-active' : 'ham-menu-span'}`}></span>
             </div>
-
-            <div ref={menuRef} className="">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet provident libero earum modi quasi rem aliquam? Vitae sint, rem, perferendis doloribus excepturi in sunt iste debitis atque aspernatur quo saepe!
-                </p>
+            
+            <div
+            className={`
+                p-2 
+                flex flex-col justify-start 
+                pt-[25px] 
+                h-full w-full max-w-xs 
+                fixed top-0 
+                bg-gray-900 
+                border-r border-[#232323] 
+                transition-all duration-300 ease-in-out
+                ${open ? 'left-0 z-[800]' : '-left-[450px]'}
+            `}>
+                <div className='mt-10'>
+                    <HeaderNav />
+                </div>
             </div>
         </div>
     )
