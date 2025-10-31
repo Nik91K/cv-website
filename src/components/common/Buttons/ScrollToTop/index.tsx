@@ -27,7 +27,7 @@ const ScrollToTopButton = () => {
         {isVisible && (
             <button 
                 onClick={scrollToTop}
-                className="transition fixed right-8 bottom-8 bg-[var(--transparent-color)] p-3 rounded-2xl cursor-pointer link"
+                className="transition fixed right-8 bottom-8 bg-[var(--transparent-color)] p-3 rounded-2xl cursor-pointer link z-50"
             >
                 <FaArrowUp size={18}/>
             </button>

@@ -27,7 +27,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                     />
                 </div>
                 <div className='flex justify-center items-center max-w-7xl mx-auto -translate-y-20' >
-                    <div className="flex-1 text-left">
+                    <div className="flex flex-col justify-start text-left lg:w-1/2 w-full p-8">
                         <SplitText 
                             text={item.title}
                             className="text-5xl md:text-8xl font-bold mb-6"
@@ -39,23 +39,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                             to={{ opacity: 1, y: 0 }}
                             threshold={0.1}
                             rootMargin="-100px"
-                            textAlign="center"
-                        />
-                        <SplitText 
-                            text={item.subtitle}
-                            className="text-xl"
-                            delay={100}
-                            duration={0.4}
-                            ease="power3.out"
-                            splitType="lines"
-                            from={{ opacity: 0, y: 40 }}
-                            to={{ opacity: 1, y: 0 }}
-                            threshold={0.1}
-                            rootMargin="-100px"
                             textAlign="left"
                         />
+                        <p className="text-2xl">{item.subtitle}</p>
                     </div>
-                    <div className="flex-1 flex justify-center">
+                    <div className="hidden lg:flex flex-1 justify-center">
                         <img
                             src={item.image}
                             alt={item.imageTitle}
