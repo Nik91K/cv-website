@@ -10,14 +10,6 @@ export type HeroSectionProps = {
     items?: HeroSection[],
 }
 
-type Contacts = {
-    email: string,
-    github?: string,
-    linkedin?: string,
-    twitter?: string,
-    website?: string,
-}
-
 type Skills = {
     title?: string,
     skills?: string[]
