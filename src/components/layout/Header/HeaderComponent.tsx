@@ -18,7 +18,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header className={`w-full px-[4vh] h-[10vh] sticky top-0 z-[1000] transition-all duration-300 ease-in-out backdrop-blur-[0px] ${scrolled ? " bg-[var(--transparent-color)] backdrop-blur-[15px] border-b border-white/10 shadow-md"  : ""}`}>
+    <header className={`w-full px-[4vh] h-[10vh] sticky top-0 z-[1000] transition-all duration-300 ease-in-out backdrop-blur-[0px] ${scrolled ? " bg-[var(--transparent-color)] backdrop-blur-[15px] shadow-md"  : ""}`}>
       <div className="h-full w-full flex justify-between items-center">
         <div className="font-bold text-2xl">
           <a href='/#home' className="link whitespace-nowrap">

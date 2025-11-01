@@ -1,6 +1,7 @@
 import React from "react"
 import type { FooterProps } from "../../../types/Footer"
 import { FOOTER } from "../../../fixtures/footer.fixture"
+import Link from "@/components/common/Buttons/Link"
 
 const Footer: React.FC<FooterProps> = ({
     id = FOOTER.id,
@@ -38,12 +39,10 @@ const Footer: React.FC<FooterProps> = ({
                         <ul className="space-y-2">
                             {quickLinks.map((link, index) => (
                                 <li key={index}>
-                                    <a 
-                                        href={link.path}
-                                        className="link text-sm"
-                                    >
-                                        {link.label}
-                                    </a>
+                                    <Link
+                                        link={link.path}
+                                        label={link.label}
+                                    />
                                 </li>
                             ))}
                         </ul>
