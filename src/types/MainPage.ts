@@ -15,11 +15,22 @@ type Skills = {
     skills?: string[]
 }
 
+type Languages = {
+    title?: string,
+    items?: LanguagesItems[]
+}
+
+type LanguagesItems = {
+    name?: string,
+    level?: string
+}
+
 export type AboutItemProps = {
     id?: string,
     title?: string,
     text?: string,
     skills?: Skills[]
+    languages?: Languages
 }
 
 type Experience = {

@@ -4,6 +4,7 @@ import type { WorkProps } from "../../../types/MainPage";
 import SubSection from "./SubSection";
 import ExperienceCard from "./ExperienceCard";
 import ProjectCard from "./ProjectCard";
+import EmptyState from "../EmptyState";
 
 const WorkSection: React.FC<WorkProps> = ({
     id = WORK.id,
@@ -18,7 +19,7 @@ const WorkSection: React.FC<WorkProps> = ({
             className="w-full min-h-screen flex items-center justify-center py-[11vh] px-6 text-[var(--primary-color)]"
         >
             <div className="container max-w-7xl">
-                <header>
+                <header className="text-center">
                     <h2 className="text-4xl md:text-6xl font-extrabold mb-8">
                         {title}
                     </h2>
@@ -35,7 +36,7 @@ const WorkSection: React.FC<WorkProps> = ({
                                 </li>
                             ))
                         ) : (
-                            <p>No experience</p>
+                            <EmptyState text={experience.title ?? 'title'} />
                         )}
                     </SubSection>
                 )}
@@ -51,7 +52,7 @@ const WorkSection: React.FC<WorkProps> = ({
                                 </li>
                             ))
                         ) : (
-                            <p>No projects</p>
+                            <EmptyState text={projects.title ?? 'title'} />
                         )}
                     </SubSection>
                 )}

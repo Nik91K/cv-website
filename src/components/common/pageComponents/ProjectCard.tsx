@@ -18,7 +18,8 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                     <img
                         src={project.image}
                         alt={project.imageAlt || project.title || 'Project image'}
-                        className="w-full h-48 object-cover rounded-xl shadow-md"
+                        className="w-full h-full object-cover rounded-2xl"
+                        loading="lazy"
                     />
                 )}
                 

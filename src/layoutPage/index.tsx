@@ -5,9 +5,9 @@ import ResponsiveHeader from "../components/layout/Header/ResponsiveHeader"
 
 const LayoutPage = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="bg-[#16161a]">
+    <div className="bg-[#16161a] flex min-h-screen flex-col">
       <ResponsiveHeader />
-      <main className="w-full">
+      <main className="w-full flex-1">
         <ScrollToTopButton />
         {children}
       </main>

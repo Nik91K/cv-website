@@ -18,7 +18,7 @@ export const FOOTER = {
         {
             id: 'email',
             label: 'Email',
-            url: 'mailto:your.email@example.com',
+            url: 'jview95@gmail.com',
             icon: FaEnvelope
         }
     ],
@@ -27,6 +27,6 @@ export const FOOTER = {
         { label: 'Home', path: '#home' },
         { label: 'About', path: '#about' },
         { label: 'Experience', path: '#experience' },
-        { label: 'Work', path: '#work' }
+        { id: 'contacts', label: 'Contacts', path: '#contacts' },
     ]
 }
