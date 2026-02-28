@@ -1,69 +1,69 @@
 type HeroSection = {
-    id: string,
-    title: string,
-    subtitle: string,
-    image: string,
-    imageTitle: string,
-}
+  id: string;
+  title: string;
+  subtitle: string;
+  image: string;
+  imageTitle: string;
+};
 
 export type HeroSectionProps = {
-    items?: HeroSection[],
-}
+  items?: HeroSection[];
+};
 
 type Skills = {
-    title?: string,
-    skills?: string[]
-}
+  title?: string;
+  skills?: string[];
+};
 
 type Languages = {
-    title?: string,
-    items?: LanguagesItems[]
-}
+  title?: string;
+  items?: LanguagesItems[];
+};
 
 type LanguagesItems = {
-    name?: string,
-    level?: string
-}
+  name?: string;
+  level?: string;
+};
 
 export type AboutItemProps = {
-    id?: string,
-    title?: string,
-    text?: string,
-    skills?: Skills[]
-    languages?: Languages
-}
+  id?: string;
+  title?: string;
+  text?: string;
+  skills?: Skills[];
+  languages?: Languages;
+};
 
 type Experience = {
-    company?: string,
-    role?: string,
-    years?: string,
-    description?: string,
-}
+  company?: string;
+  role?: string;
+  years?: string;
+  description?: string;
+};
 
 type ExperienceSection = {
-    title?: string,
-    subtitle?: string,
-    items?: Experience[],
-}
+  title?: string;
+  subtitle?: string;
+  items?: Experience[];
+};
 
 type Projects = {
-    title?: string,
-    text?: string,
-    image?: string,
-    imageAlt?: string,
-    links?: string[],
-    technologies?: string[],
-}
+  title?: string;
+  text?: string;
+  image?: string;
+  imageAlt?: string;
+  links?: string[];
+  technologies?: string[];
+};
 
 type ProjectsSection = {
-    title?: string,
-    subtitle?: string,
-    items?: Projects[]
-}
+  title?: string;
+  subtitle?: string;
+  items?: Projects[];
+};
 
 export type WorkProps = {
-    id?: string,
-    title?: string
-    experience?: ExperienceSection,
-    projects?: ProjectsSection,
-}
+  id?: string;
+  title?: string;
+  experience?: ExperienceSection;
+  projects?: ProjectsSection;
+};

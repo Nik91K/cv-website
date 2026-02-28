@@ -14,12 +14,12 @@
 }
 
 .link {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
 }
 
 .link:hover {
-    color: #d1d5dc;
-    text-decoration: underline;
+  color: #d1d5dc;
+  text-decoration: underline;
 }

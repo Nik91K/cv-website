@@ -1,20 +1,20 @@
 import type { IconType } from 'react-icons';
 
 type Socials = {
-    id: string,
-    label: string,
-    url: string,
-    icon: IconType,
-}
+  id: string;
+  label: string;
+  url: string;
+  icon: IconType;
+};
 
 type QuickLinks = {
-    label: string,
-    path: string,
-}
+  label: string;
+  path: string;
+};
 
 export type FooterProps = {
-    id?: string,
-    socials?: Socials[],
-    copyright?: string,
-    quickLinks?: QuickLinks[],
-}
+  id?: string;
+  socials?: Socials[];
+  copyright?: string;
+  quickLinks?: QuickLinks[];
+};

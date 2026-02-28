@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -62,10 +62,11 @@
   }
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
-  font-family: 'Manrope', sans-serif
+  font-family: 'Manrope', sans-serif;
 }
 
 @theme inline {
@@ -144,8 +145,4 @@ html, body {
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
 }
-

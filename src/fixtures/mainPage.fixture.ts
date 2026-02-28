@@ -1,5 +1,5 @@
 import laptopCoffee from '../assets/images/main-page-img.png';
-import portfolioScreenshot from '../assets/images/portfolio-screenshot.png'
+import portfolioScreenshot from '../assets/images/portfolio-screenshot.png';
 
 export const HERO_SECTION = [
   {
@@ -7,9 +7,9 @@ export const HERO_SECTION = [
     title: 'Welcome',
     subtitle: `My name is Koval Nikita, I am a front-end developer live in Ukraine. Unfortunately, I don't have any real projects yet, but I really enjoy learning and discovering new things about programming. Currently, I am studying front-end web programming, TypeScript, and the React framework. Perhaps in the future, I will study something else.`,
     image: laptopCoffee,
-    imageTitle: 'Portfolio'
-  }
-]
+    imageTitle: 'Portfolio',
+  },
+];
 
 export const ABOUT = {
   id: 'about',
@@ -19,25 +19,33 @@ export const ABOUT = {
     title: 'Languages',
     items: [
       { name: 'Ukrainian', level: 'Native' },
-      { name: 'English', level: 'B1' }
-    ]
+      { name: 'English', level: 'B1' },
+    ],
   },
   skills: [
     {
-        title: 'Frontend',
-        skills: ['HTML5', 'CSS3', 'Responsive design', 'Git', 'JavaScript', 'TypeScript', 'React', 'TailwindCSS'],
+      title: 'Frontend',
+      skills: [
+        'HTML5',
+        'CSS3',
+        'Responsive design',
+        'Git',
+        'JavaScript',
+        'TypeScript',
+        'React',
+        'TailwindCSS',
+      ],
     },
     {
-        title: 'Backend',
-        skills: ['Node.js (basic)', 'NestJS (basic)'],
+      title: 'Backend',
+      skills: ['Node.js (basic)', 'NestJS (basic)'],
     },
   ],
   contacts: {
     github: 'https://github.com/Nik91K',
     likedin: 'https://www.linkedin.com/in/nikita-koval-17680331b/',
-  }
-
-}
+  },
+};
 
 export const WORK = {
   id: 'experience',
@@ -45,7 +53,7 @@ export const WORK = {
   experience: {
     title: 'Professional Experience',
     subtitle: 'My journey through various roles and companies',
-    items: []
+    items: [],
   },
   projects: {
     title: 'Featured Projects',
@@ -57,14 +65,8 @@ export const WORK = {
         image: portfolioScreenshot,
         imageAlt: 'Screenshot of personal portfolio website',
         links: ['https://github.com/Nik91K/cv-website'],
-        technologies: ['React', 'TypeScript', 'TailwindCSS'],
+        technologies: ['React', 'TypeScript', 'TailwindCSS', 'Vite'],
       },
-      {
-        title: 'Password-Keeper',
-        text: 'A website that has a password generator and stores passwords in a convenient format. When generating a password, you can specify formulas, length, and remove certain characters. Local storage in the browser, export/import of json files.',
-        links: ['https://github.com/Nik91K/Password-Keeper'],
-        technologies: ['React', 'TypeScript', 'TailwindCSS', 'IndexDB'],
-      }
-    ]
-  }
-}
+    ],
+  },
+};
