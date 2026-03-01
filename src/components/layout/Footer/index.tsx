@@ -1,6 +1,7 @@
 import React from 'react';
 import type { FooterProps } from '@/types/Footer';
 import { FOOTER } from '@fixtures/footer.fixture';
+import { Separator } from '@components/ui/separator';
 import Link from '@components/common/Buttons/Link';
 
 const Footer: React.FC<FooterProps> = ({
@@ -57,9 +58,8 @@ const Footer: React.FC<FooterProps> = ({
             </p>
           </div>
         </div>
-        <div className="border-t border-gray-800 pt-6 mt-8">
-          <p className="text-center text-sm text-gray-500">{copyright}</p>
-        </div>
+        <Separator className="bg-gray-800" />
+        <p className="text-center text-sm text-gray-500 mt-6">{copyright}</p>
       </div>
     </footer>
   );

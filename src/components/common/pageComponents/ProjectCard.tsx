@@ -1,7 +1,9 @@
 import React from 'react';
-import WorkSectionCard from '@components/common/WorkSectionCard';
+import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/card';
+import { Badge } from '@components/ui/badge';
+import { Separator } from '@components/ui/separator';
 
-type Project = {
+type Projects = {
   title?: string;
   text?: string;
   image?: string;
@@ -10,60 +12,63 @@ type Project = {
   technologies?: string[];
 };
 
-const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+const ProjectCard: React.FC<{ project: Projects }> = ({ project }) => {
   return (
-    <WorkSectionCard>
-      <div className="flex flex-col gap-4">
+    <Card className="h-full w-full bg-white/5 border-white/10">
+      <CardHeader className="p-0">
         {project.image && (
           <img
             src={project.image}
             alt={project.imageAlt || project.title || 'Project image'}
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full object-cover rounded-t-2xl"
             loading="lazy"
           />
         )}
-
         {project.title && (
-          <h3 className="text-xl font-bold">{project.title}</h3>
+          <CardTitle className="px-6 pt-4 text-xl font-bold">
+            {project.title}
+          </CardTitle>
         )}
+      </CardHeader>
 
+      <CardContent className="flex flex-col gap-4 px-6 pb-6">
         {project.text && (
           <p className="text-white/80 leading-relaxed">{project.text}</p>
         )}
 
         {project.technologies && project.technologies.length > 0 && (
-          <div className="flex flex-wrap gap-2 mt-2">
+          <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech, index) => (
-              <span
-                key={`tech-${index}`}
-                className="px-3 py-1 bg-white/10 rounded-full text-sm text-white/90"
-              >
+              <Badge key={`tech-${index}`} variant="secondary">
                 {tech}
-              </span>
+              </Badge>
             ))}
           </div>
         )}
 
         {project.links && project.links.length > 0 && (
-          <nav className="mt-2" aria-label="Project links">
-            <ul className="flex flex-col gap-2">
-              {project.links.map((link, index) => (
-                <li key={`link-${index}`}>
-                  <a
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-semibold text-[var(--blue-color)] hover:text-[var(--blue-color-hover)] hover:underline transition break-all"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <>
+            <Separator className="bg-white/10" />
+            <nav aria-label="Project links">
+              <ul className="flex flex-col gap-2">
+                {project.links.map((link, index) => (
+                  <li key={`link-${index}`}>
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-semibold text-[var(--blue-color)] hover:text-[var(--blue-color-hover)] hover:underline transition break-all"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </>
         )}
-      </div>
-    </WorkSectionCard>
+      </CardContent>
+    </Card>
   );
 };
 

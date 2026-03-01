@@ -1,10 +1,9 @@
 import React from 'react';
-import { HERO_SECTION } from '@fixtures/mainPage.fixture';
 import type { HeroSectionProps } from '@/types/MainPage';
-import Aurora from '@/components/ui/Aurora';
-import SplitText from '@/components/ui/SplitText';
+import Aurora from '@components/ui/Aurora';
+import SplitText from '@components/ui/SplitText';
 
-const HeroSection: React.FC<HeroSectionProps> = ({ items = HERO_SECTION }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ items }) => {
   return (
     <>
       {items.map((item, index) => (

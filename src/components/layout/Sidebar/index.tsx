@@ -8,7 +8,7 @@ const Sidebar = () => {
   return (
     <div className="flex">
       <div
-        className="ham-menu z-[801] fixed h-12 w-10 bg-[var(--transparent-color)] cursor-pointer] top-8 left-5 rounded-sm"
+        className="ham-menu z-[801] fixed h-12 w-10 bg-[var(--transparent-color)] pointer top-8 left-5 rounded-sm"
         onClick={() => setOpen(!open)}
       >
         <span

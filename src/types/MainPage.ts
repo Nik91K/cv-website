@@ -7,7 +7,7 @@ type HeroSection = {
 };
 
 export type HeroSectionProps = {
-  items?: HeroSection[];
+  items: HeroSection[];
 };
 
 type Skills = {
@@ -26,11 +26,11 @@ type LanguagesItems = {
 };
 
 export type AboutItemProps = {
-  id?: string;
-  title?: string;
-  text?: string;
-  skills?: Skills[];
-  languages?: Languages;
+  id: string;
+  title: string;
+  text: string;
+  skills: Skills[];
+  languages: Languages;
 };
 
 type Experience = {
@@ -62,8 +62,8 @@ type ProjectsSection = {
 };
 
 export type WorkProps = {
-  id?: string;
-  title?: string;
-  experience?: ExperienceSection;
-  projects?: ProjectsSection;
+  id: string;
+  title: string;
+  experience: ExperienceSection;
+  projects: ProjectsSection;
 };

@@ -1,5 +1,6 @@
 import React from 'react';
-import WorkSectionCard from '@components/common/WorkSectionCard';
+import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/card';
+import { Badge } from '@components/ui/badge';
 
 type Experience = {
   company?: string;
@@ -12,28 +13,35 @@ const ExperienceCard: React.FC<{ experience: Experience }> = ({
   experience,
 }) => {
   return (
-    <WorkSectionCard>
-      <div className="flex flex-col h-full gap-4">
+    <Card className="h-full w-full bg-white/5 border-white/10 hover:border-white/20 hover:bg-white/10 hover:shadow-xl hover:shadow-white/10 transition-all duration-300">
+      <CardHeader>
         {experience.company && (
-          <h3 className="text-xl font-bold">{experience.company}</h3>
+          <CardTitle className="text-xl font-bold">
+            {experience.company}
+          </CardTitle>
         )}
         {experience.years && (
-          <p className="text-[var(--blue-color)] text-sm font-medium">
+          <Badge
+            variant="outline"
+            className="w-fit text-[var(--blue-color)] border-[var(--blue-color)]"
+          >
             {experience.years}
-          </p>
+          </Badge>
         )}
+      </CardHeader>
+      <CardContent className="flex flex-col gap-3">
         {experience.role && (
           <p className="text-lg font-semibold text-white/90">
             {experience.role}
           </p>
         )}
         {experience.description && (
-          <p className="text-white/70 leading-relaxed mt-2">
+          <p className="text-white/70 leading-relaxed">
             {experience.description}
           </p>
         )}
-      </div>
-    </WorkSectionCard>
+      </CardContent>
+    </Card>
   );
 };
 
