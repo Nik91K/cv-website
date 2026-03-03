@@ -1,39 +1,65 @@
-import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/card';
+import { useState } from 'react';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from '@components/ui/card';
 import { Badge } from '@components/ui/badge';
 import { Separator } from '@components/ui/separator';
+import { Button } from '@components/ui/button';
+import { ExternalLink } from 'lucide-react';
 
-type Projects = {
+type Project = {
   title?: string;
   text?: string;
-  image?: string;
+  image?: string | null;
   imageAlt?: string;
   links?: string[];
   technologies?: string[];
 };
 
-const ProjectCard: React.FC<{ project: Projects }> = ({ project }) => {
+const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+  const [showFullText, setShowFullText] = useState(false);
+  const isLong = (project.text?.length ?? 0) > 200;
+
   return (
-    <Card className="h-full w-full bg-white/5 border-white/10">
-      <CardHeader className="p-0">
-        {project.image && (
-          <img
-            src={project.image}
-            alt={project.imageAlt || project.title || 'Project image'}
-            className="w-full h-full object-cover rounded-t-2xl"
-            loading="lazy"
-          />
-        )}
+    <Card className="flex flex-col h-full w-full bg-white/5 border-white/10 overflow-hidden">
+      <div className="h-48 w-full overflow-hidden shrink-0">
+        <img
+          src={project.image || 'https://placehold.co/600x400'}
+          alt={project.imageAlt || project.title || 'Project image'}
+          className="w-full h-full object-cover transition-transform duration-300"
+          loading="lazy"
+        />
+      </div>
+
+      <CardHeader className="pb-2">
         {project.title && (
-          <CardTitle className="px-6 pt-4 text-xl font-bold">
-            {project.title}
-          </CardTitle>
+          <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
         )}
       </CardHeader>
 
-      <CardContent className="flex flex-col gap-4 px-6 pb-6">
+      <CardContent className="flex flex-col gap-4 px-6 pb-6 flex-grow">
         {project.text && (
-          <p className="text-white/80 leading-relaxed">{project.text}</p>
+          <>
+            <p
+              className={`text-white/80 leading-relaxed text-sm ${!showFullText && isLong ? 'line-clamp-4' : ''}`}
+            >
+              {project.text}
+            </p>
+            {isLong && (
+              <Button
+                onClick={() => setShowFullText(!showFullText)}
+                variant="outline"
+                size="sm"
+                className="self-start"
+              >
+                {showFullText ? 'Show less' : 'Read more'}
+              </Button>
+            )}
+          </>
         )}
 
         {project.technologies && project.technologies.length > 0 && (
@@ -45,29 +71,30 @@ const ProjectCard: React.FC<{ project: Projects }> = ({ project }) => {
             ))}
           </div>
         )}
-
-        {project.links && project.links.length > 0 && (
-          <>
-            <Separator className="bg-white/10" />
-            <nav aria-label="Project links">
-              <ul className="flex flex-col gap-2">
-                {project.links.map((link, index) => (
-                  <li key={`link-${index}`}>
-                    <a
-                      href={link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm font-semibold text-[var(--blue-color)] hover:text-[var(--blue-color-hover)] hover:underline transition break-all"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </>
-        )}
       </CardContent>
+
+      {project.links && project.links.length > 0 && (
+        <CardFooter className="px-6 pb-6 pt-0 flex flex-col gap-2 items-start">
+          <Separator className="bg-white/10 mb-2" />
+          <nav aria-label="Project links" className="w-full">
+            <ul className="flex flex-col gap-2">
+              {project.links.map((link, index) => (
+                <li key={`link-${index}`}>
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--blue-color)] hover:text-[var(--blue-color-hover)] hover:underline transition"
+                  >
+                    <ExternalLink size={14} className="shrink-0" />
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </CardFooter>
+      )}
     </Card>
   );
 };

@@ -1,6 +1,7 @@
 import laptopCoffee from '@assets/images/main-page-img.png';
 import portfolioScreenshot from '@assets/images/portfolio-screenshot.png';
 import venueBookingBackend from '@assets/images/venue-booking-system-backend.png';
+import venueBookingFrontend from '@assets/images/venue-booking-system-frontend.png';
 
 export const HERO_SECTION = [
   {
@@ -75,7 +76,7 @@ export const WORK = {
       {
         title: 'Venue Booking — Front-end',
         text: 'This is the front-end part of the platform for booking seats and tables in restaurants and other establishments. Users can browse and search for establishments, reserve tables, leave reviews, and manage their reservations. This project features a Google Maps map, data visualization using Recharts, and a clear, accessible interface created using Shadcn components.',
-        image: undefined,
+        image: venueBookingFrontend,
         imageAlt: 'Screenshot of the Venue Booking front-end',
         links: [
           'https://github.com/Nik91K/venue-booking-frontend/tree/develop',

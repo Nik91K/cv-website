@@ -5,7 +5,7 @@ import HeroSection from '@components/common/pageComponents/HeroSection';
 import AboutHero from '@components/common/pageComponents/AboutHero';
 import WorkSection from '@components/common/pageComponents/WorkSection';
 
-function App() {
+function MainPage() {
   return (
     <LayoutPage>
       <HeroSection items={HERO_SECTION} />
@@ -26,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default MainPage;

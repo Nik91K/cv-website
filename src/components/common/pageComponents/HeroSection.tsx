@@ -2,6 +2,7 @@ import React from 'react';
 import type { HeroSectionProps } from '@/types/MainPage';
 import Aurora from '@components/ui/Aurora';
 import SplitText from '@components/ui/SplitText';
+import { motion } from 'motion/react';
 
 const HeroSection: React.FC<HeroSectionProps> = ({ items }) => {
   return (
@@ -41,7 +42,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ items }) => {
                 rootMargin="-100px"
                 textAlign="left"
               />
-              <p className="text-2xl">{item.subtitle}</p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-2xl"
+              >
+                {item.subtitle}
+              </motion.p>
             </div>
             <div className="hidden lg:flex flex-1 justify-center">
               <img
