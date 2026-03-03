@@ -18,7 +18,7 @@ export const FOOTER = {
     {
       id: 'email',
       label: 'Email',
-      url: 'jview95@gmail.com',
+      url: 'mailto:jview95@gmail.com',
       icon: FaEnvelope,
     },
   ],
