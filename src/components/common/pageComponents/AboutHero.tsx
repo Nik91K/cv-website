@@ -1,7 +1,7 @@
 import React from 'react';
 import type { AboutItemProps } from '@/types/MainPage';
 import { Badge } from '@components/ui/badge';
-import SkillsGrid from '@/components/common/pageComponents/SkillsGrid';
+import SkillsGrid from '@components/common/pageComponents/SkillsGrid';
 
 const AboutHero: React.FC<AboutItemProps> = ({
   title,
@@ -15,11 +15,9 @@ const AboutHero: React.FC<AboutItemProps> = ({
       id={id}
       className="w-full min-h-screen bg-gradient-to-b from-sky-100 to-[var(--primary-color)] flex items-center justify-center py-24 px-6"
     >
-      <div className="container text-center">
-        <h2 className="text-4xl md:text-6xl font-extrabold text-[var(--secondary-color)] mb-8">
-          {title}
-        </h2>
-        <p className="text-base md:text-lg leading-relaxed">{text}</p>
+      <div className="container text-center text-[var(--secondary-color)]">
+        <h2 className="text-4xl md:text-6xl font-extrabold mb-8">{title}</h2>
+        <p className="text-left color- md:text-lg leading-relaxed ">{text}</p>
         <div className="mt-8">
           <h2 className="text-2xl font-semibold mb-4">{languages.title}</h2>
           <ul className="flex flex-wrap gap-3 justify-center max-w-md mx-auto">
