@@ -78,9 +78,7 @@ export const WORK = {
         text: 'This is the front-end part of the platform for booking seats and tables in restaurants and other establishments. Users can browse and search for establishments, reserve tables, leave reviews, and manage their reservations. This project features a Google Maps map, data visualization using Recharts, and a clear, accessible interface created using Shadcn components.',
         image: venueBookingFrontend,
         imageAlt: 'Screenshot of the Venue Booking front-end',
-        links: [
-          'https://github.com/Nik91K/venue-booking-frontend/tree/develop',
-        ],
+        links: ['https://github.com/Nik91K/venue-booking-frontend'],
         technologies: [
           'React',
           'TypeScript',
@@ -92,6 +90,8 @@ export const WORK = {
           'Google Maps API',
           'Embla Carousel',
           'Sonner',
+          'Motion',
+          'Sentry',
         ],
       },
       {
@@ -99,7 +99,7 @@ export const WORK = {
         text: 'This is the backend part of a project for booking tables in establishments. It uses REST API, which ensures the operation of the room booking platform created on the basis of NestJS and PostgreSQL. It handles user authentication using JWT (access and refresh tokens), venue and reservation management, uploading venue image files, user reviews, and populating the database with realistic sample data. The API is fully documented using Swagger.',
         image: venueBookingBackend,
         imageAlt: 'Screenshot of the Venue Booking backend Swagger docs',
-        links: ['https://github.com/Nik91K/venue-booking-system/tree/develop'],
+        links: ['https://github.com/Nik91K/venue-booking-system'],
         technologies: [
           'NestJS',
           'TypeScript',
@@ -115,11 +115,21 @@ export const WORK = {
       },
       {
         title: 'Portfolio Website',
-        text: 'This responsive personal resume website showcases my skills, projects, and background as a front-end developer. Built with React, TypeScript, and TailwindCSS, it features smooth animations powered by GSAP and a clean, modern design.',
+        text: 'This responsive personal resume website showcases my skills, projects, and background as a front-end developer. Built with React, TypeScript, and TailwindCSS, it features smooth animations powered by Motion and a clean, modern design.',
         image: portfolioScreenshot,
         imageAlt: 'Screenshot of personal portfolio website',
-        links: ['https://github.com/Nik91K/cv-website/tree/develop'],
-        technologies: ['React', 'TypeScript', 'TailwindCSS', 'Vite', 'Shadcn'],
+        links: [
+          'https://github.com/Nik91K/cv-website',
+          'https://cv-website-olive-three.vercel.app/',
+        ],
+        technologies: [
+          'React',
+          'TypeScript',
+          'TailwindCSS',
+          'Vite',
+          'Shadcn',
+          'Motion',
+        ],
       },
     ],
   },

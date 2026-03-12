@@ -10,6 +10,7 @@ import { Badge } from '@components/ui/badge';
 import { Separator } from '@components/ui/separator';
 import { Button } from '@components/ui/button';
 import { ExternalLink } from 'lucide-react';
+import DialogNoCloseButton from '@components/common/pageComponents/AlertDialog';
 
 type Project = {
   title?: string;
@@ -27,11 +28,9 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <Card className="flex flex-col h-full w-full bg-white/5 border-white/10 overflow-hidden">
       <div className="h-48 w-full overflow-hidden shrink-0">
-        <img
-          src={project.image || 'https://placehold.co/600x400'}
-          alt={project.imageAlt || project.title || 'Project image'}
-          className="w-full h-full object-cover transition-transform duration-300"
-          loading="lazy"
+        <DialogNoCloseButton
+          image={project.image || 'https://placehold.co/600x400'}
+          imageAlt={project.imageAlt || project.title || 'Project image'}
         />
       </div>
 

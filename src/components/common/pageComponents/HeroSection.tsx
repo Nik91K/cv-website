@@ -9,7 +9,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ items }) => {
     <>
       {items.map((item, index) => (
         <section
-          className="min-h-screen flex items-center justify-center text-[var(--primary-color)]"
+          className="min-h-screen flex items-center justify-center text-[var(--primary-color)] overflow-hidden"
           id={item.id}
           key={index}
         >
@@ -27,8 +27,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ items }) => {
               speed={0.5}
             />
           </div>
-          <div className="flex justify-center items-center max-w-7xl mx-auto -translate-y-20">
-            <div className="flex flex-col justify-start text-left lg:w-1/2 w-full p-8">
+          <div className="flex flex-col lg:flex-row justify-center items-center max-w-7xl mx-auto -translate-y-20">
+            <div className="flex flex-col text-left lg:w-1/2 w-full p-8 pt-28">
               <SplitText
                 text={item.title}
                 className="text-5xl md:text-8xl font-bold mb-6"
@@ -51,11 +51,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ items }) => {
                 {item.subtitle}
               </motion.p>
             </div>
-            <div className="hidden lg:flex flex-1 justify-center">
+            <div className="hidden lg:flex flex-1 justify-center overflow-hidden">
               <img
                 src={item.image}
                 alt={item.imageTitle}
-                className="max-w-xl rounded-3xl shadow-2xl shadow-black/50 transition"
+                className="w-full max-w-[500px] h-auto rounded-3xl shadow-2xl shadow-black/50"
               />
             </div>
           </div>
