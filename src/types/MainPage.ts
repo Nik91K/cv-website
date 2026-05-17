@@ -51,6 +51,7 @@ type Projects = {
   text?: string;
   image?: string;
   imageAlt?: string;
+  images?: string[];
   links?: string[];
   technologies?: string[];
 };
