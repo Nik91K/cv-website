@@ -40,7 +40,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                 'https://placehold.co/600x400/1a1a1a/444?text=Project'
               }
               alt={project.imageAlt ?? project.title ?? 'Project image'}
-              className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
           </div>
 

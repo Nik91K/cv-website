@@ -27,7 +27,7 @@ const NotFoundPage = () => {
         <div className="max-w-2xl w-full text-center">
           <div className="relative mb-8">
             <motion.h1
-              className="text-[12rem] md:text-[16rem] font-bold text-transparent bg-clip-text bg-gradient-to-br from-gray-200 via-gray-400 to-gray-600 dark:from-gray-700 dark:via-gray-500 dark:to-gray-300 leading-none select-none"
+              className="text-[12rem] md:text-[16rem] font-bold text-transparent bg-clip-text bg-linear-to-br from-gray-200 via-gray-400 to-gray-600 dark:from-gray-700 dark:via-gray-500 dark:to-gray-300 leading-none select-none"
               animate={{
                 x: mousePosition.x,
                 y: mousePosition.y,
@@ -56,7 +56,7 @@ const NotFoundPage = () => {
             <Button
               onClick={() => navigate('/')}
               size="lg"
-              className="gap-2 min-w-[160px]"
+              className="gap-2 min-w-40"
             >
               <Home className="w-4 h-4" />
               Go Home
@@ -65,7 +65,7 @@ const NotFoundPage = () => {
               onClick={() => navigate(-1)}
               variant="default"
               size="lg"
-              className="gap-2 min-w-[160px]"
+              className="gap-2 min-w-40"
             >
               <ArrowLeft className="w-4 h-4" />
               Go Back
