@@ -21,7 +21,7 @@ export const HERO_SECTION = [
   {
     id: 'home',
     title: 'Welcome',
-    subtitle: `My name is Nikita Koval, I am a frontend developer living in Ukraine. I am interested in learning and discovering new things in programming. Currently, I am deepening my knowledge in frontend web development, TypeScript, and the React framework, and I have recently started exploring back-end development with Node.js and NestJS as well.`,
+    subtitle: `My name is !Nik, I am a frontend developer living in Ukraine. I am interested in learning and discovering new things in programming. Currently, I am deepening my knowledge in frontend web development, TypeScript, and the React framework, and I have recently started exploring back-end development with Node.js and NestJS as well.`,
     image: laptopCoffee,
     imageTitle: 'Professional Web Development',
   },
@@ -74,10 +74,6 @@ export const ABOUT = {
       ],
     },
   ],
-  contacts: {
-    github: 'https://github.com/Nik91K',
-    likedin: 'https://www.linkedin.com/in/nikita-koval-17680331b/',
-  },
 };
 
 export const WORK = {

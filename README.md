@@ -1,3 +1,12 @@
+# [ARCHIVED / LEGACY] Personal Website (v1)
+
+> **Note:** This repository is now archived and represents the legacy (v1) version of my personal website built with React.
+>
+> The new, active version (v2) built with Next.js, Tailwind CSS, and shadcn/ui is available here:
+> **[github.com/notnikbtw/portfolio](https://github.com/notnikbtw/portfolio)**
+
+---
+
 # cv-website
 
 Personal portfolio and resume website built with React and TypeScript. Features a responsive layout, smooth animations, and a project showcase with individual project pages.

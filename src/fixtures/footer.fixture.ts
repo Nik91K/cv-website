@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaEnvelope } from 'react-icons/fa';
 
 export const FOOTER = {
   id: 'contacts',
@@ -6,23 +6,17 @@ export const FOOTER = {
     {
       id: 'github',
       label: 'GitHub',
-      url: 'https://github.com/Nik91K',
+      url: 'https://github.com/notnikbtw',
       icon: FaGithub,
-    },
-    {
-      id: 'linkedin',
-      label: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/nikita-koval-17680331b/',
-      icon: FaLinkedin,
     },
     {
       id: 'email',
       label: 'Email',
-      url: 'mailto:jview95@gmail.com',
+      url: 'mailto:notnikbtw@proton.me',
       icon: FaEnvelope,
     },
   ],
-  copyright: `© ${new Date().getFullYear()} Nikita Koval. All rights reserved.`,
+  copyright: `© ${new Date().getFullYear()} !Nik. All rights reserved.`,
   quickLinks: [
     { label: 'Home', path: '#home' },
     { label: 'About', path: '#about' },
